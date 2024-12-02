@@ -16,7 +16,7 @@ services:
       context: .
       dockerfile: products-subgraph/Dockerfile
       args:
-        JAR_FILE: ./products.jar
+        JAR_FILE: ./products-subgraph/build/libs/products.jar
     ports:
       - 8080:8080
     healthcheck:
@@ -29,7 +29,7 @@ services:
       context: .
       dockerfile: reviews-subgraph/Dockerfile
       args:
-        JAR_FILE: ./reviews.jar
+        JAR_FILE: ./reviews-subgraph/build/libs/reviews.jar
     ports:
       - 8081:8081
     healthcheck:
